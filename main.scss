@@ -1,0 +1,67 @@
+
+/* 
+Author: GDG El Paso Team
+Author URI: https://gdgelpaso.org
+Description: For GDG El Paso website theme. 
+Version: 0.1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+*/
+
+
+$bg-color: #fff;
+$txt-color: #454545;
+
+
+html {
+    font-size: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body, input, textarea, select, button {
+    font-synthesis: none;
+    -moz-font-feature-settings: 'kern';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    direction: ltr;
+    text-align: left;
+}
+
+body {
+    background: $bg-color;
+    color: $txt-color;
+    font-family: "Google Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 17.5px;
+    line-height: 1.47059;
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+}
+
+body.body-view { /* flexbox container */
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    flex-direction: column;
+    -webkit-flex-direction: column;
+}
+
+/* stretch main to fill height + flexbox container + align center */
+main.content { 
+    flex-grow: 1;
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
