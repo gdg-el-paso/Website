@@ -2,23 +2,178 @@
 <head>
 
 <!-- Meta & WP head will go here. -->
+<title>GDG El Paso - Home</title>
+
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 </head>
 <body class="body-view">
 
-<header class="header" role="banner">
-    [Site header content here.]
-</header>
+    <button class="fab" type="button">
+        <span class="fab-wrapper"><img src="plus.png" class="icon-more"></span>  
+    </button>
 
-<main class="content" role="contentinfo">
-    [Site main content here.]
-</main>
+    <div id="preloader-background">
+            <div id="spinners">
+                <div class="loader" id="loader">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+    </div>
 
-<footer class="footer">
-    [Footer content here.]
-</footer>
+    <div class="popup-menu">
+
+            <div class="popup-menu-outer">
+                <div class="popup-menu-inner">
+                    <div class="hamburger emergency-button" id="hamburger-1">
+                        <span class="line"></span>
+                        <span class="line"></span>
+                        <span class="line"></span>
+                    </div>
+                    <div class="hi" style="text-align: center;">
+                        <h1 class="title">Contact Us</h1>
+                    </div>
+                </div>
+                <div class="popup-copyright">Google Developer Group</div>
+            </div>
+    
+    </div>
+
+    <header class="header header_fixed" role="banner">
+        <div class="wrapper">
+            <button class="btn hamburger-button" type="button">
+                <i class="material-icons">menu</i>
+            </button>
+            <div class="site-branding">
+                <a href="./" rel="GDG El Paso Home">
+                    <img src="logo.png" class="site-logo">
+                    <div class="site-branding-wrapper">
+                        <span class="site-title">GDG El Paso</span>
+                        <span class="site-description">Google Developer Group</span>
+                    </div>
+                </a>
+            </div>
+            <div class="site-navigation">
+                <div class="site-navigation-wrapper">
+                    <div id="site-navigation">
+                        Home
+                    </div>
+                </div>
+            </div>
+            <form autocomplete="off" role="search" method="get" class="searchform" id="searchform" action="">
+            	<button class="btn search-button" type="button">
+                    <i class="material-icons">search</i>
+            	</button>
+				<input name="s" id="s" class="search-input" type="search" aria-label="Search box" placeholder="Search">
+            </form>
+            <button class="btn close-button" type="button"><i class="material-icons">
+                    close
+                    </i></button>
+            <button style="display: none" class="btn action-button">Join GDG</button>
+        </div>
+    </header>
+
+    <main class="content" role="contentinfo">
+        <div class="wrapper">
+            <section class="hero-banner">
+                <h1 class="title">Site Under Construction</h1>
+                <h2 class="subtitle">New Site Coming Soon!</h2>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="wrapper">
+            <span>Copyright 2019 GDG El Paso</span>
+        </div>
+    </footer>
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  
+  
+  <script type="text/javascript">
+  
+  (function() {
+   
+   'use strict';
+   
+   var $form = $('.searchform');
+   var $closeButton = $('.close-button');
+   var $siteNav = $('.site-navigation');
+   var $nav = $('.site-navigation-wrapper');
+   var $searchbutton = $('.search-button');
+   var $logowrapper = $('.site-branding');
+   var $searchInput = $('.search-input');
+   
+   jQuery('.search-button, .close-btn, .fade-screen').on('click', function(e) {
+      $form.toggleClass('search-open');
+      $closeButton.toggleClass('search-open');
+      $siteNav.toggleClass('search-open');
+      $nav.toggleClass('search-open');
+      $logowrapper.toggleClass('search-open');
+      $popout.toggleClass('search-open');
+      $headerAction.toggleClass('search-open');
+      searchInput.focus();
+                                            
+      // $searchbutton.prop("disabled",true);
+                               
+      e.preventDefault();
+                                                       
+  });
+   
+   
+   $('.curtain, .search-close').on('click', function(e) {
+                                   $menu.toggleClass('is-closed');
+                                   e.preventDefault();
+                                   });
+   
+   }())
+  
+  </script>
+
+<script type="text/javascript">
+
+    // script detects clicks outside of the search box
+    var form = document.querySelector(".searchform");
+    var closebutton = document.querySelector(".close-button");
+    var sitenav = document.querySelector(".site-navigation");
+    var mainnav = document.querySelector(".site-navigation-wrapper");
+    var logowrapper = document.querySelector(".site-branding");
+    
+    // detect all clicks on the document
+    document.addEventListener("click", function(event) {
+        
+    // if user clicks on the search box -> do nothing
+    if (event.target.closest(".header .searchform")) return;
+    
+    // else remove .active from elements in header
+    form.classList.remove("search-open");
+    closebutton.classList.remove("search-open");
+    sitenav.classList.remove("search-open");
+    mainnav.classList.remove("search-open");
+    logowrapper.classList.remove("search-open");
+    popout.classList.remove("search-open");
+    headeraction.classList.remove("search-open");
+    
+                              
+    });
+    
+    </script>
+    
+    <script>
+            $(document).ready(function(){$(".fab, .emergency-button").click(function(){$(".hamburger").toggleClass("is-active"),$(".popup-menu").toggleClass("popup-active"),$(".navigation-top").toggleClass("popup-active"),$(".popup-menu-inner").toggleClass("popup-active"),$("body").toggleClass("popup-active"),$("#top-menu > li > a").each(function(t){$(this).css({"-webkit-animation-delay":70*t+"ms","animation-delay":70*t+"ms"})})})});
+            </script>
+
+<script>$(function(){setTimeout(function(){$("#preloader-background").fadeOut("slow",function(){$(this).remove()})},1500)});</script>
+  
 
 </body>
-
 
 </html>
